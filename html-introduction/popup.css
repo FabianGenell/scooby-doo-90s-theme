@@ -1,0 +1,74 @@
+.pop-up {
+    position: fixed;
+    top: 20vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    visibility: hidden;
+
+    background-color: #000000d6;
+    box-shadow: 0 20px 50px rgb(90, 31, 23);
+    z-index: 3;
+
+    max-width: 500px;
+
+    width: auto;
+    border: 2px solid #ad2a2a;
+
+}
+
+#scooby:target {
+    visibility: visible;
+    transition-timing-function: ease-in-out;
+}
+#shaggy:target {
+    visibility: visible;
+}
+#fred:target {
+    visibility: visible;
+}
+#velma:target {
+    visibility: visible;
+}
+#daphne:target {
+    visibility: visible;
+}
+
+
+.pop-up-content {
+    border: 1px solid #f0a591;
+    background-color: rgb(19, 19, 19);
+    z-index: 4;
+    margin: 20px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+}
+
+.pop-up-content img {
+    max-width: 80%;
+}
+
+.pop-up .bio-text {
+    width: 80%;
+    text-align: center;
+}
+
+.pop-up-content .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(85, 85, 85);
+}
+
+.pop-up-content .close:hover {
+    color: rgb(203, 203, 203);
+
+}

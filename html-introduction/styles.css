@@ -1,0 +1,168 @@
+
+
+body, html {
+    cursor: url(img/scooby-snack.gif-a), pointer;
+    
+}
+
+.spinning-snack:hover {
+    
+    animation: spin 0.25s infinite;
+
+}
+
+
+
+body {
+    background-color: black;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    color: aliceblue;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header-class {
+    border: 1px solid red;
+    margin: 10px 20px;
+    text-align: center;
+    height: 80px;
+    z-index: 3;
+
+}
+
+.header-class h1 em {
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.header-class img {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    max-height: 70px;
+
+}
+
+@keyframes blinking{
+    0%{   color: #ef5350;   }
+    15%{   color: #f48fb1; }
+    33%{   color: #7e57c2; }
+    44%{   color: #2196f3; }
+    55%{  color: #26c6da;   }
+    66%{  color: #43a047;   }
+    77%{  color: #eeff41;   }
+    88%{  color: #f9a825;   }
+    100%{  color: #ff5722;   }
+
+}
+
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    text-align: center;
+    animation: blinking 2s infinite;
+
+}
+.content h2 {
+    text-decoration: underline;    
+}
+
+.main-image {
+
+    max-width: 400px;
+    max-height: 30%;
+    
+}
+
+.scooby-crew {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 50px;
+
+    width: 80%;
+    padding: 0;
+    margin-bottom: 70px;
+
+    
+}
+
+.scooby-crew li {
+    display: flex;
+    gap: 7px;
+    flex-direction: column;
+    background-color: red;
+    height: 100px;
+
+    z-index: 2;
+}
+.scooby-crew li img{
+    max-height: 100%;
+}
+
+.scooby-crew li a {
+    text-decoration: underline;
+    animation: blinking 2s infinite;
+
+}
+
+footer {
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    bottom: 0;
+    margin: 0px;
+
+    text-align: center;
+
+}
+
+.form {
+    position: fixed;
+    display:block;
+    width: 100%;
+    bottom: 70px;
+    margin: auto;
+    z-index: 2;
+}
+
+.fire-footer {
+    position: fixed;
+    width: 100%;
+    bottom: -40px;
+    z-index: 1;
+
+}
+
+@media screen and (max-width: 730px) {
+
+    .form {
+        display: none;
+    }
+
+    body {
+        overflow:auto;
+        overflow-x: hidden;
+    }
+
+    .fire-footer {
+        bottom: -10px;
+
+    
+    }
+
+}
