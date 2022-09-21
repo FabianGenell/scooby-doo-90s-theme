@@ -32,3 +32,12 @@ Viewport (vh, vw) - percentage of total window size
 
 
 
+**accessibility**
+
+ari-labels - describe whatever element or link (what does it do?)
+
+alt text - for images, if you dont want anything just put alt=""
+
+Focus indicators - you can't simply remove them they must be there so keyboard navigation is possible (what should it look like hovered, focused?)
+
+

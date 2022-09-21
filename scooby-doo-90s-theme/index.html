@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="popup.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
+
 <body>
+    <!-- This is the mouse!-->
+    <img class="scooby-snack" id="scooby-snack" src="img/snacks/scooby-snack-1.png">
 
     <header class="header-class">
         <marquee behavior="" direction="left">Hello</marquee>
@@ -17,20 +23,30 @@
         <h1>Scooby <em>Dooby</em> Doop</h1>
     </header>
 
-    <section class="content">
-        <h2>RULES</h2>
-        <p>This is a site <strong>EXCLUSIVELY</strong> about scooby do. <br> Do NOT attempt to talk about ANYTHING else on this website.</p>
+    <section id="content" class="content">
+        <div id="rules" class="rules">
+            <h2>RULES</h2>
+            <p>This is a site <strong>EXCLUSIVELY</strong> about scooby do. <br> Do NOT attempt to talk about ANYTHING
+                else
+                on this website.</p>
+        </div>
+        <div class="no-mouse" id="no-mouse">
+            <h2>Oh no!!!</h2>
+            <p>Scooby and Shaggy are your scooby snack mouse!!!</p>
+            <a onClick="newScoobySnack()">Click me to get another snack</a>
+        </div>
         <img class="main-image" src="img/cast-asshole.jpg">
     </section>
 
     <nav class="content">
         <h2>Scooby Crew Members</h2>
-        <ul class="scooby-crew"> <!--Ony li elemaents can be inside a ul. if you want other things put them INSIDE a li element-->
-            <li><img src="img/characters/shaggy.jpg"><a href="#shaggy">Shaggy</a></li>
-            <li><img src="img/characters/velma.webp"><a href="#velma">Velma</a></li>
-            <li><img src="img/characters/scooby.webp"><a href="#scooby">Scooby</a></li>
-            <li><img src="img/characters/daphne.png"><a href="#daphne">Daphne</a></li>
-            <li><img src="img/characters/fred.jpg"><a href="#fred">Fred</a></li>
+        <ul class="scooby-crew">
+            <!--Ony li elemaents can be inside a ul. if you want other things put them INSIDE a li element-->
+            <li id="shaggy-selector"><img src="img/characters/shaggy.jpg"><a href="#shaggy">Shaggy</a></li>
+            <li id="velma-selector"><img src="img/characters/velma.webp"><a href="#velma">Velma</a></li>
+            <li id="scooby-selector"><img src="img/characters/scooby.webp"><a href="#scooby">Scooby</a></li>
+            <li id="daphne-selector"><img src="img/characters/daphne.png"><a href="#daphne">Daphne</a></li>
+            <li id="fred-selector"><img src="img/characters/fred.jpg"><a href="#fred">Fred</a></li>
         </ul>
     </nav>
 
@@ -43,7 +59,8 @@
                 <img src="img/characters/scooby.webp" alt="Scoobert Doo">
 
                 <div class="bio-text">
-                    <p>Scoobert "Scooby" Doo is the Great Dane mascot of Mystery Inc., and pet and best friend of Shaggy Rogers.</p>
+                    <p>Scoobert "Scooby" Doo is the Great Dane mascot of Mystery Inc., and pet and best friend of Shaggy
+                        Rogers.</p>
                 </div>
             </div>
         </div>
@@ -56,12 +73,13 @@
                 <img src="img/characters/shaggy.jpg" alt="Shaggy Rogers">
 
                 <div class="bio-text">
-                    <p>Norville "Shaggy" Rogers is a member of Mystery Inc., and the owner and best friend of their team's mascot: Scooby-Doo, a talking Great Dane.</p>
+                    <p>Norville "Shaggy" Rogers is a member of Mystery Inc., and the owner and best friend of their
+                        team's mascot: Scooby-Doo, a talking Great Dane.</p>
                 </div>
             </div>
         </div>
 
-        
+
         <div class="pop-up" id="velma">
             <div class="pop-up-content">
                 <h3>Velma Dinkley</h3>
@@ -70,13 +88,14 @@
                 <img src="img/characters/velma.webp" alt="Velma Dinkley">
 
                 <div class="bio-text">
-                    <p>Velma Dinkley is the bespectacled resident genius of Mystery Inc., often being the one to decipher the clues and solve the crimes.
+                    <p>Velma Dinkley is the bespectacled resident genius of Mystery Inc., often being the one to
+                        decipher the clues and solve the crimes.
 
                     </p>
                 </div>
             </div>
         </div>
-        
+
         <div class="pop-up" id="daphne">
             <div class="pop-up-content">
                 <h3>Daphne Blake</h3>
@@ -85,7 +104,8 @@
                 <img src="img/characters/daphne.png" alt="Velma Dinkley">
 
                 <div class="bio-text">
-                    <p>Daphne Blake is the fashion-loving member of Mystery Inc. Daphne's characteristic trait in the gang is her tendency to get into danger, hence earning the nickname "Danger-prone Daphne".</p>
+                    <p>Daphne Blake is the fashion-loving member of Mystery Inc. Daphne's characteristic trait in the
+                        gang is her tendency to get into danger, hence earning the nickname "Danger-prone Daphne".</p>
                 </div>
             </div>
         </div>
@@ -98,7 +118,9 @@
                 <img src="img/characters/fred.jpg" alt="Fred Jones">
 
                 <div class="bio-text">
-                    <p>Fred "Freddy" Jones is the leader of the Mystery Inc. gang, and (more often than not) the driver of their van: The Mystery Machine. Fred is statuesque and brave; everything that the group's other male human member, Shaggy Rogers, isn't.
+                    <p>Fred "Freddy" Jones is the leader of the Mystery Inc. gang, and (more often than not) the driver
+                        of their van: The Mystery Machine. Fred is statuesque and brave; everything that the group's
+                        other male human member, Shaggy Rogers, isn't.
 
                     </p>
                 </div>
@@ -115,10 +137,10 @@
             <form>
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name">
-                
+
                 <label for="email"> Email</label>
                 <input type="text" name="email" id="email">
-                
+
                 <button>Submit</button>
             </form>
         </div>
@@ -127,8 +149,11 @@
             <img src="img/fire-2.gif" alt="fire" width="100%">
         </div>
     </footer>
-    
+
+
+    <script src="script.js"></script>
 
 
 </body>
+
 </html>

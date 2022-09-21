@@ -1,14 +1,28 @@
 
 
 body, html {
-    cursor: url(img/scooby-snack.gif-a), pointer;
     
+    cursor: none;
+
 }
 
-.spinning-snack:hover {
-    
-    animation: spin 0.25s infinite;
+a {
+    cursor: none;
+}
 
+.scooby-snack {
+    
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    pointer-events: none;
+    width: 130px;
+
+}
+
+.no-mouse {
+    color: red;
+    display:none;
 }
 
 
@@ -162,7 +176,10 @@ footer {
     .fire-footer {
         bottom: -10px;
 
-    
+    }
+
+    .scooby-snack {
+        display: none;
     }
 
 }
