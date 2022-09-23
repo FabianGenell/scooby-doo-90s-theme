@@ -6,13 +6,18 @@ TODO:
 */
 let snack = document.getElementById('scooby-snack');
 
+let characters = ['shaggy', 'scooby'];
 
-let shaggy = document.getElementById('shaggy-selector');
-let scooby = document.getElementById('scooby-selector');
 let bites = 1;
 
-shaggy.addEventListener('mouseenter', (e) => { takeBite(e); console.log('Event!'); });
-scooby.addEventListener('mouseenter', (e) => { takeBite(e) });
+//Adding event listeners to characters
+characters.forEach(elementName => {
+
+    let element = document.getElementById(elementName + '-selector');
+    element.addEventListener('mouseenter', (e) => { takeBite(e) });
+    element.addEventListener('animationend', (e) => { snackEaten(e) });
+
+});
 
 window.addEventListener('mousemove', (e) => {
 
@@ -20,6 +25,11 @@ window.addEventListener('mousemove', (e) => {
     snack.style.top = e.clientY + 'px';
 
 });
+
+function snackEaten(e) {
+    wait = false;
+    e.target.classList.remove('animate__animated', 'animate__wobble');
+}
 
 let wait = false;
 
@@ -39,13 +49,6 @@ function takeBite(e) {
     }
 
     snack.setAttribute('src', 'img/snacks/scooby-snack-' + bites + '.png');
-
-
-    setTimeout(() => {
-        wait = false;
-        e.target.classList.remove('animate__animated', 'animate__wobble');
-
-    }, 700);
 
 }
 const rules = document.getElementById('rules');
@@ -70,8 +73,13 @@ function newScoobySnack() {
     console.log('You got a new scooby snack!');
 
     wait = false;
-    shaggy.classList.remove('animate__animated', 'animate__wobble');
-    scooby.classList.remove('animate__animated', 'animate__wobble');
+    characters.forEach(elementName => {
+
+        let element = document.getElementById(elementName + '-selector');
+        element.classList.remove('animate__animated', 'animate__wobble');
+
+    });
+
 
 }
 

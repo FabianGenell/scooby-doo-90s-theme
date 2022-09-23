@@ -5,7 +5,7 @@
     right: 0;
     margin: 0 auto;
 
-    visibility: hidden;
+    display: none;
 
     background-color: #000000d6;
     box-shadow: 0 20px 50px rgb(90, 31, 23);
@@ -19,19 +19,19 @@
 }
 
 #scooby:target {
-    visibility: visible;
+    display: block;
 }
 #shaggy:target {
-    visibility: visible;
+    display: block;
 }
 #fred:target {
-    visibility: visible;
+    display: block;
 }
 #velma:target {
-    visibility: visible;
+    display: block;
 }
 #daphne:target {
-    visibility: visible;
+    display: block;
 }
 
 

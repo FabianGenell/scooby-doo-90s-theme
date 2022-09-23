@@ -97,7 +97,6 @@ body {
 .main-image {
 
     max-width: 400px;
-    max-height: 30%;
     
 }
 
@@ -151,14 +150,14 @@ footer {
     width: 100%;
     bottom: 70px;
     margin: auto;
-    z-index: 2;
+    z-index: 4;
 }
 
 .fire-footer {
     position: fixed;
     width: 100%;
     bottom: -40px;
-    z-index: 1;
+    z-index: 3;
 
 }
 
@@ -171,6 +170,7 @@ footer {
     body {
         overflow:auto;
         overflow-x: hidden;
+        cursor:auto;
     }
 
     .fire-footer {
