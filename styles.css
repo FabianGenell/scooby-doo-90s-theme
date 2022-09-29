@@ -57,13 +57,19 @@ body {
 }
 
 
-.header-class img {
+.header__van-image {
     position: absolute;
     right: 30px;
     top: 15px;
     max-height: 70px;
 
+    object-fit: cover;
+    width:80;
+    height: 80;
+
 }
+
+
 
 @keyframes blinking{
     0%{   color: #ef5350;   }
@@ -168,9 +174,8 @@ footer {
     }
 
     body {
-        overflow:auto;
-        overflow-x: hidden;
-        cursor:auto;
+        overflow-y:auto;
+        cursor: auto;
     }
 
     .fire-footer {
@@ -180,6 +185,9 @@ footer {
 
     .scooby-snack {
         display: none;
+    }
+    a {
+        cursor: pointer;
     }
 
 }

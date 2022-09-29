@@ -14,8 +14,8 @@ let bites = 1;
 characters.forEach(elementName => {
 
     let element = document.getElementById(elementName + '-selector');
-    element.addEventListener('mouseenter', (e) => { takeBite(e) });
-    element.addEventListener('animationend', (e) => { snackEaten(e) });
+    element.addEventListener('mouseenter', (e) => { takeBite(e.target) });
+    element.addEventListener('animationend', (e) => { snackEaten(e.target) });
 
 });
 
@@ -26,20 +26,20 @@ window.addEventListener('mousemove', (e) => {
 
 });
 
-function snackEaten(e) {
+function snackEaten(element) {
     wait = false;
-    e.target.classList.remove('animate__animated', 'animate__wobble');
+    element.classList.remove('animate__animated', 'animate__wobble');
 }
 
 let wait = false;
 
-function takeBite(e) {
+function takeBite(element) {
 
     if (wait) { return; }
 
     wait = true;
     bites++;
-    e.target.classList.add('animate__animated', 'animate__wobble');
+    element.classList.add('animate__animated', 'animate__wobble');
 
 
     if (bites > 4) {
